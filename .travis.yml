@@ -14,4 +14,3 @@ before_install:
 
 after_success:
   - ./.build_scripts/build.sh
-  - ./.build_scripts/deploy.sh
