@@ -6,6 +6,6 @@ var logo = require('./logo');
 module.exports = {
   environment: 'production',
   consoleMessage: logo,
-  editorUrl: '//opengovt.github.io/openroads-iD/'
+  editorUrl: '//opengovt.github.io/openroads-iD'
 };
 

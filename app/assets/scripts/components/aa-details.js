@@ -3,6 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router';
 import ID from '../utils/id';
+import config from '../config';
 
 var AADetails = React.createClass({
   propTypes: {
@@ -55,7 +56,7 @@ var AADetails = React.createClass({
         <td>
           <ul className='actions-menu'>
             <li><a href='#' className='bttn-verify'>Verify</a></li>
-            <li><a href='#' className='bttn-edit'>Edit</a></li>
+            <li><a href={`${config.editorUrl}/#bounds=${o.bbox.join('/')}`} className='bttn-edit' target='_blank'>Edit</a></li>
           </ul>
         </td>
       </tr>

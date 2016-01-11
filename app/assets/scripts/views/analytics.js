@@ -34,6 +34,7 @@ var Analytics = React.createClass({
       <section className='page'>
         <PageHeader
           pageTitle={this.props.subregions.name}
+          bbox={this.props.subregions.bbox || []}
           actions />
 
         <div className='page__body aa'>
