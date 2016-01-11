@@ -1,6 +1,7 @@
 'use strict';
 import React from 'react';
 import Search from './search';
+import config from '../config';
 
 var SiteHeader = React.createClass({
   propTypes: {
@@ -30,7 +31,7 @@ var SiteHeader = React.createClass({
               <ul>
                 <li><a href='#'>Home</a></li>
                 <li><a href='#'>About</a></li>
-                <li><a href='#'>Map</a></li>
+                <li><a href={config.editorUrl}>Map</a></li>
               </ul>
             </nav>
           </div>

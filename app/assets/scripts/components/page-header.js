@@ -1,11 +1,13 @@
 'use strict';
 import React from 'react';
+var config = require('../config');
 
 var PageHeader = React.createClass({
   propTypes: {
     // Actions will probably change to a list...
     actions: React.PropTypes.bool,
-    pageTitle: React.PropTypes.string
+    pageTitle: React.PropTypes.string,
+    bbox: React.PropTypes.array
   },
 
   renderActions: function () {
@@ -13,7 +15,7 @@ var PageHeader = React.createClass({
       return (
         <div className='page__actions'>
           <ul className='actions-menu'>
-            <li><a href='#' className='bttn-edit'>Edit</a></li>
+            <li><a href={`${config.editorUrl}/#bounds=${this.props.bbox.join('/')}`} className='bttn-edit'>Edit</a></li>
           </ul>
         </div>
       );
