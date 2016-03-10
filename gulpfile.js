@@ -186,7 +186,7 @@ gulp.task('collecticons', function (done) {
 // --------------------------- Helper tasks -----------------------------------//
 // ----------------------------------------------------------------------------//
 
-gulp.task('styles', function () {
+gulp.task('styles', ['collecticons'], function () {
   return gulp.src('app/assets/styles/main.scss')
     .pipe($.plumber(function (e) {
       notifier.notify({
